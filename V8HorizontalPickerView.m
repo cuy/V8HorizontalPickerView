@@ -42,6 +42,12 @@
 - (NSInteger)indexForElement:(UIView *)element;
 @end
 
+@interface V8HorizontalPickerView () {
+#pragma mark - iVars
+    UIScrollView *_scrollView;
+}
+
+@end
 
 #pragma mark - Implementation
 @implementation V8HorizontalPickerView : UIView
@@ -52,9 +58,6 @@
 @synthesize selectionPoint, selectionIndicatorView, indicatorPosition;
 @synthesize leftEdgeView, rightEdgeView;
 @synthesize leftScrollEdgeView, rightScrollEdgeView, scrollEdgeViewPadding;
-
-#pragma mark - iVars
-UIScrollView *_scrollView;
 
 // collection of widths of each element.
 NSMutableArray *elementWidths;
